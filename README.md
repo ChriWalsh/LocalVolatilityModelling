@@ -41,7 +41,7 @@ Once all the above preliminary preparations have been done then, the code can be
 1. The data is loaded and the estimates are calculated when running 
 **Main_Estimation_Code.r**. The code has been split into seperate steps with comments as to 
 what each step does. The code for the corresponding functions are
-all in the **AuxiliaryCode/** folder. 
+all in the **AuxiliaryCode/** folder.  
 
 2. Additional code to get (pointwise) confidence intervals and 
 construct figures and table as in paper is provided in 
