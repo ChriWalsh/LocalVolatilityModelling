@@ -1,6 +1,6 @@
 # LocalVolatilityModelling
 
-Date: 17.01.2021
+Date: 21.01.2022
 
 This repository contains the R code to run the application in the 
 conditionally accepted article:
