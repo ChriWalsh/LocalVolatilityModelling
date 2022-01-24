@@ -65,11 +65,13 @@ bw_plugin <- function(x,y,bw,data_returns,Max=100){
          # Step 1: Calculate an estimator for the asymptotic variance
          #-------------------------------------------------------------
          #
-         # (i)   Asymptotic variance for the time component is based on long run variance obtained from GARCH model
-         # fitted by modelling the squared process as an ARMA
+         # (i) Asymptotic variance for the time component is based on long run variance formula. 
+         # This uses asymptotic variance expression for log transform of the sample mean of 
+         # squared GARCH(1,1) and the ARMA(1,1) representation of a squared GARCH process. For details see 
+         # Section S.4 of supplementary material of the paper.  
          # (ii) Asymptotic variance for stochastic components is estimated by the empirical variance of the additive residuals.
          # (This simplifies from having to estimate the conditional variance for each direction.)
-         # GARCH model.
+    
          
          # Initialize the asymptotic variance
          asy.variance  <- vector(mode="double",length=dim(x)[2])
@@ -94,7 +96,8 @@ bw_plugin <- function(x,y,bw,data_returns,Max=100){
          coeff.sq.ARMA <- coef(para.fit)
          var.eta.ARMA <- para.fit$sigma2
     
-         # Calculate the long-run variance plugging into formula for ARMA
+         # Calculate the long-run variance based on asymptotic variance formula 
+         # for mean of log of ARMA(1,1) obtained from delta method.
          lr.var <- var.eta.ARMA/coeff.sq.ARMA[3]^2*(1+coeff.sq.ARMA[2])^2
          asy.variance[1] <- lr.var
          
