@@ -1,12 +1,11 @@
 # LocalVolatilityModelling
 
-Date: 21.01.2022
+Date: 02.02.2022
 
-This repository contains the R code to run the application in the 
-conditionally accepted article:
+This repository contains the data set and the R code to run the application in:
 
-Walsh, C.P.  and Vogt, M. (2022+) "Locally Stationary Multiplicative Volatility Modelling"
-*Journal of Business Economics and Statistics*
+Walsh, C.P.  and Vogt, M. (2022), "Locally Stationary Multiplicative Volatility Modelling"
+*Journal of Business Economics and Statistics*, Online at https://doi.org/10.1080/07350015.2022.2036612 
 
 The code used for computing the smooth backfitting estimators is based on C code (originally written by Berthold Haag).
 
@@ -18,6 +17,19 @@ The repository contains:
 * the main estimation code in the file **Main_Estimation_Code.r** to estimate the model components  
 * additional code to reproduce the figures and the table from the application section of the paper is in the file **Extra_Code_Plots.r**
 * auxiliary commented functions in the folder **AuxiliaryCode/**
+
+### Data 
+
+The data in the folder **Data/Data_Application.csv** consists of the following:
+
+* The first column (*Date*) contains the date 
+* The second column (*SP500*) contains the S&P 500 log returns
+* The third column (*T10yAaa.lag*) contains the lagged yield difference between 10 year treasuries and Aaa bonds
+* The fourth column (*Aaa.Baa.lag*) contains the lagged yield difference between Aaa bonds and Baa bonds
+* The fifth column (*T10yT1y.lag*) contains the lagged yield difference between 10 year and 1 year treasuries
+
+The raw data used to calculate the S&P 500 log returns were taken from Yahoo!Finance (https://finance.yahoo.com). The raw data used to calculate the lagged yield differences were taken from the FRED database of the Federal Reserve bank of St.Louis (https://fred.stlouisfed.org/).
+
 
 ## Preliminariy steps BEFORE running the code
 
