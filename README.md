@@ -31,7 +31,7 @@ The data in the folder **Data/Data_Application.csv** consists of the following:
 The raw data used to calculate the S&P 500 log returns were taken from Yahoo!Finance (https://finance.yahoo.com). The raw data used to calculate the lagged yield differences were taken from the FRED database of the Federal Reserve bank of St.Louis (https://fred.stlouisfed.org/).
 
 
-## Preliminariy steps BEFORE running the code
+## Preliminary steps BEFORE running the code
 
 1. In order to run the C code one needs to build a shared library 
 which is then dynamically loaded:
