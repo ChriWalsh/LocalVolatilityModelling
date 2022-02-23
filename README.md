@@ -5,7 +5,7 @@ Date: 02.02.2022
 This repository contains the data set and the R code to run the application in:
 
 Walsh, C.P.  and Vogt, M. (2022), "Locally Stationary Multiplicative Volatility Modelling"
-*Journal of Business Economics and Statistics*, Online at https://doi.org/10.1080/07350015.2022.2036612 
+*Journal of Business and Economic Statistics*, Online at https://doi.org/10.1080/07350015.2022.2036612 
 
 The code used for computing the smooth backfitting estimators is based on C code (originally written by Berthold Haag).
 
